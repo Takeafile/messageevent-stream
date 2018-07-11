@@ -1,0 +1,38 @@
+{
+  "name": "messageevent-stream",
+  "version": "0.0.0",
+  "description": "Wrap a MessageEvent emiter object as a Node.js stream",
+  "scripts": {
+    "test": "jest --notify --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/piranna/messageevent-stream.git"
+  },
+  "keywords": [
+    "MessageEvent",
+    "stream",
+    "streams",
+    "duplex",
+    "WebSocket",
+    "DataChannel",
+    "Server-send",
+    "events",
+    "postMessage",
+    "MessagePort",
+    "Worker",
+    "ServiceWorker",
+    "Broadcastchannel",
+    "onmessage",
+    "message",
+    "event",
+    "message",
+    "event"
+  ],
+  "author": "Jesús Leganés-Combarro 'piranna' <piranna@gmail.com>",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/piranna/messageevent-stream#readme",
+  "devDependencies": {
+    "jest": "^23.4.0"
+  }
+}
