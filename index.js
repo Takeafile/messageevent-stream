@@ -19,7 +19,7 @@ function writev(chunks, cb)
 }
 
 
-module.exports = function MessageEventStream(ws, options = {})
+module.exports = function MessageEventStream(ws, {closeOnFinish, ...options} = {})
 {
   const send = ws.send || ws.postMessage
 
@@ -48,6 +48,8 @@ module.exports = function MessageEventStream(ws, options = {})
 
       callback()
     }
+
+    if(closeOnFinish) stream.on('finish', ws.close.bind(ws))
 
     // Allow to concatenate and sent messages as one if not in `objectMode`
     if(!options.objectMode) stream._writev = writev
