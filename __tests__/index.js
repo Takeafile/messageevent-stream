@@ -8,6 +8,11 @@ class NullSocket
     this[name] = func
   }
 
+  close(code, reason)
+  {
+    // setImmediate(this['close'])
+  }
+
   send(data)
   {
     setImmediate(this['message'], {data})
