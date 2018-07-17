@@ -26,6 +26,7 @@ module.exports = function MessageEventStream(ws, {closeOnFinish, ...options} = {
   const Constructor = send ? Duplex : Readable
 
   const stream = new Constructor({...options, read})
+  .once('close', ws.close.bind(ws))
 
   // Configure `MessageEvent` emitter object
   ws.addEventListener('close', function()
@@ -49,7 +50,7 @@ module.exports = function MessageEventStream(ws, {closeOnFinish, ...options} = {
       callback()
     }
 
-    if(closeOnFinish) stream.on('finish', ws.close.bind(ws))
+    if(closeOnFinish) stream.once('finish', stream.emit.bind(stream, 'close'))
 
     // Allow to concatenate and sent messages as one if not in `objectMode`
     if(!options.objectMode) stream._writev = writev
