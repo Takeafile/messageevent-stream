@@ -29,11 +29,7 @@ module.exports = function MessageEventStream(ws, {closeOnFinish, ...options} = {
   .once('close', ws.close.bind(ws))
 
   // Configure `MessageEvent` emitter object
-  ws.addEventListener('close', function()
-  {
-    stream.end()
-    stream.destroy()
-  })
+  ws.addEventListener('close', stream.destroy.bind(stream))
   ws.addEventListener('error', stream.destroy.bind(stream))
   ws.addEventListener('message', function({data})
   {
