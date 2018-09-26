@@ -33,6 +33,6 @@
   "license": "ISC",
   "homepage": "https://bitbucket.org/piranna/messageevent-stream#readme",
   "devDependencies": {
-    "jest": "^23.4.1"
+    "jest": "^23.6.0"
   }
 }
