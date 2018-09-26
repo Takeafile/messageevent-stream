@@ -53,18 +53,19 @@ module.exports = function MessageEventStream(ws, {closeOnFinish, ...options} = {
 
     // Don't call to `write()` until the `MessageEvent` emitter object is ready
     const {OPEN, readyState} = ws
-    if(readyState === OPEN || readyState === 'open') return
-
-    stream.cork()
-
-    function onOpen()
+    if(readyState !== OPEN && readyState !== 'open')
     {
-      ws.removeEventListener('open', onOpen)
+      stream.cork()
 
-      process.nextTick(stream.uncork.bind(stream))
+      function onOpen()
+      {
+        ws.removeEventListener('open', onOpen)
+
+        process.nextTick(stream.uncork.bind(stream))
+      }
+
+      ws.addEventListener('open', onOpen)
     }
-
-    ws.addEventListener('open', onOpen)
   }
 
   return stream
