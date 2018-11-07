@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "description": "Wrap a MessageEvent emiter object as a Node.js stream",
   "scripts": {
+    "size": "size-limit",
     "test": "jest --notify --coverage"
   },
   "repository": {
@@ -33,6 +34,12 @@
   "license": "ISC",
   "homepage": "https://github.com/Takeafile/messageevent-stream#readme",
   "devDependencies": {
-    "jest": "^23.6.0"
-  }
+    "jest": "^23.6.0",
+    "size-limit": "^0.21.0"
+  },
+  "size-limit": [
+    {
+      "limit": "18 KB"
+    }
+  ]
 }
