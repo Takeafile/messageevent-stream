@@ -7,7 +7,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/piranna/messageevent-stream.git"
+    "url": "git+ssh://git@github.com/Takeafile/messageevent-stream.git"
   },
   "keywords": [
     "MessageEvent",
@@ -31,7 +31,7 @@
   ],
   "author": "Jesús Leganés-Combarro 'piranna' <piranna@gmail.com>",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/piranna/messageevent-stream#readme",
+  "homepage": "https://github.com/Takeafile/messageevent-stream#readme",
   "devDependencies": {
     "jest": "^23.6.0"
   }
