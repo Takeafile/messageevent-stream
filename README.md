@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/Takeafile/messageevent-stream.svg?branch=master)](https://travis-ci.org/Takeafile/messageevent-stream)
+[![Coverage Status](https://coveralls.io/repos/github/Takeafile/messageevent-stream/badge.svg?branch=master)](https://coveralls.io/github/Takeafile/messageevent-stream?branch=master)
+
 # MessageEvent-stream
 
 Wrap a MessageEvent emiter object as a Node.js stream
