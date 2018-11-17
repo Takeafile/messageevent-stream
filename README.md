@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/Takeafile/messageevent-stream.svg?branch=master)](https://travis-ci.org/Takeafile/messageevent-stream)
-[![Coverage Status](https://coveralls.io/repos/github/Takeafile/messageevent-stream/badge.svg?branch=master)](https://coveralls.io/github/Takeafile/messageevent-stream?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/Takeafile/messageevent-stream/badge.svg?branch=master)](https://coveralls.io/github/Takeafile/messageevent-stream?branch=master
+[![Greenkeeper badge](https://badges.greenkeeper.io/Takeafile/messageevent-stream.svg)](https://greenkeeper.io/)
 
 # MessageEvent-stream
 
